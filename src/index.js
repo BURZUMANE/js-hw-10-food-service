@@ -1,4 +1,4 @@
-import article from './js/menu.json'
+import article from './assets/menu.json'
 import articleTemplate from './templates/article.hbs'
 import './styles.css';
 
@@ -15,7 +15,7 @@ const Theme = {
 
 if(localStorage.getItem('theme') === 'light'){
     document.querySelector('body').classList.remove(Theme.DARK) ;
-}else{
+}else if(localStorage.getItem('theme') === 'dark'){ 
     document.querySelector('body').classList.add(Theme.DARK);
     refs.themeToggle.setAttribute('checked', 'true')
 }
